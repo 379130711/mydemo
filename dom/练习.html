@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>练习</title>
+</head>
+<body>
+  <button id="a"></button>
+  <span class="b">第一个span</span>
+  <span class="b">第二个span</span>
+<script>
+ document.getElementById("a");
+ var aSpan = document.getElementsByClassName("b");
+ var aSpan2 = document.getElementsByTagName("span");
+
+  for(var i= 0;i<aSpan.length;i++) {
+      aSpan[i].index = i;
+      aSpan[i].onclick = function () {
+          //console.log(this.index);
+
+          setInterval(function () {
+              var i = 0;
+              console.log(aSpan[i++].index);
+          },1000);
+
+      }
+  }
+
+      //var a = document.getElementsByTagName("span");
+      //console.log(aSpan[1].index);
+
+
+//  var person = {
+//      name:"xiaoming",
+//      age:"19"
+//  }
+//  person.school = "黑大";
+//  console.log(person);
+//      var i = 0;
+//      var timer = setInterval(function () {
+//          console.log(++i)
+//          if(i == 5){
+//              clearInterval(timer);
+//          }
+//      }, 1000);
+
+var person = {
+    aaaa:"xiaohong",
+    age:"12",
+    fun:function () {
+        console.log(this.aaaa);
+    }
+}
+
+//person.fun();
+
+ aSpan[0].aaaa=1;
+ aSpan[0].onclick = function () {
+     console.log(this.aaaa);
+     person.fun();
+ }
+
+
+</script>
+</body>
+</html>
