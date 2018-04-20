@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const a={
+        //     name:"xiaoming",
+        //     age:"15"
+        // }
+        // const b={
+        //     name:"dddd",
+        //     age:"12"
+        // }
+        // console.log(a);
+        // a=b
+        // console.log(a);
+        // const b="4";
+        // b="3";
+        // console.log(b);
+        function a(){
+            console.log(this);
+            var a = 0 
+            var str = "4";
+            var b = function(){
+                console.log(a,str);
+                
+                console.log(this);
+                
+                function c(){
+                    console.log(this);
+                }
+                c();
+            }
+            b();
+        }
+        a();
+//         function f1(){
+
+// 　　　　var n=999;
+
+// 　　　　nAdd=function(){n+=1}
+
+// 　　　　function f2(){
+// 　　　　　　alert(n);
+// 　　　　}
+
+// 　　　　return f2;
+
+// 　　}
+
+// 　　var result=f1();
+
+// 　　result(); // 999
+
+// 　　result(); // 1000
+// function a(){
+//     str = "aaa";
+// }
+// // console.log(str);
+// a();
+// console.log(str);
+
+        // for(var i=0;i<10;i++){
+
+        // }
+        
+        //  if(true){
+        //      let a = 10;
+        //  }
+        //  console.log(a);
+        // 闭包
+
+//         var name = "The Window";
+
+// 　　    var object = {
+//     　　　　name : "My Object",
+//     　　　　getNameFunc : function(){
+//              console.log(this);
+//              var This = this;
+//     　　　　　　return function(){
+//                 console.log(This);
+                
+//                // console.log(this);
+//     　　　　　　　　return This.name;
+//     　　　　　　};
+
+//     　　　　}
+
+//     　　};
+
+// console.log(object.getNameFunc()());
+
+// function foo(){
+//     console.log(this);
+    
+// }
+//   foo();  
+   
+setTimeout(function(){
+    console.log(this);
+},100);  
+    </script>
+</body>
+</html>
